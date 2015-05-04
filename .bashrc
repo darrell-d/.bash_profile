@@ -1,7 +1,16 @@
-#Custom Aliases
+# .bashrc
 
-#Quick connect to server
-alias darrelld='ssh ec2-user@direct.darrelld.com'
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+	if [ -x /usr/bin/fortune ] && [ -x /usr/bin/cowsay ]; then # a little fun
+		fortune | cowsay
+	fi
+fi
+
+if [ -f ./.ssh_alias ]; then
+	. .ssh_alias
+fi
 
 #For when I forget to use sudo
 alias fuck='sudo $(history -p \!\!)'
