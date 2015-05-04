@@ -1,7 +1,4 @@
 # .bashrc
-environment=$(uname)
-user=$(whoami)
-environment= ${uname,,} #to lowercase
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
@@ -11,27 +8,15 @@ if [ -f /etc/bashrc ]; then
 	fi
 fi
 
-if [ -f ./.ssh_alias ]; then
-	. .ssh_alias
-fi
-
-#For when I forget to use sudo
+# For when I forget to use sudo
 alias fuck='sudo $(history -p \!\!)'
 
-#Preferred ls usage and typo anticipation
+# Preferred ls usage and typo anticipation
 alias ls='ls -hAl'
 alias sl='ls -hAl'
 
 
-#Easy cd shortcuts and a check for cygwin
-cygwin_lc="cygwin"
-if [ "${environment/$cygwin_lc}" == "cygwin" ] || [ "${environment/$cygwin_lc}" == "CYGWIN" ]; then
-	path="/cygdrive/c/Users/"
-	alias ~='cd $path$user'
-else
-	alias ~='cd ~'
-fi
-
+alias ~='cd ~'
 alias cd..='cd ..'
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -51,4 +36,12 @@ up()
 #clear
 alias cls='clear'
 
+#Custom imports
 
+if [ -f ./.ssh_alias ]; then
+	. .ssh_alias
+fi
+
+if [ -f ./.bashrc_custom ]; then
+	. .bashrc_custom
+fi
