@@ -1,4 +1,9 @@
 # .bashrc
+environment=$(uname)
+user=$(whoami)
+environment= ${uname,,} #to lowercase
+echo $user
+
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
@@ -20,9 +25,15 @@ alias ls='ls -hAl'
 alias sl='ls -hAl'
 
 
-#Easy cd shortcuts
+#Easy cd shortcuts and a check for cygwin
+cygwin_lc="cygwin"
+if [ "${environment/$cygwin_lc}" == "cygwin" ] || [ "${environment/$cygwin_lc}" == "CYGWIN" ]; then
+	path="/cygdrive/c/Users/"
+	alias ~='cd $path$user'
+else
+	alias ~='cd ~'
+fi
 
-alias ~='cd ~'
 alias cd..='cd ..'
 alias ..='cd ..'
 alias ...='cd ../..'
