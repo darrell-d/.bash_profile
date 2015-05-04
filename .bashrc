@@ -1,7 +1,7 @@
 #Custom Aliases
 
 #Quick connect to server
-alias darrelld='ssh ***@****.***'
+alias darrelld='ssh ec2-user@direct.darrelld.com'
 
 #For when I forget to use sudo
 alias fuck='sudo $(history -p \!\!)'
