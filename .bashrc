@@ -2,8 +2,6 @@
 environment=$(uname)
 user=$(whoami)
 environment= ${uname,,} #to lowercase
-echo $user
-
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
