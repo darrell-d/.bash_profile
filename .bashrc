@@ -36,6 +36,10 @@ up()
 #clear
 alias cls='clear'
 
+#Disk usage
+alias howfull='df -h'
+alias foldersize='du -h | less'
+
 #Custom imports
 
 if [ -f ./.ssh_alias ]; then
