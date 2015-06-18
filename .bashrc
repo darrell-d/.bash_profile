@@ -13,7 +13,7 @@ alias fuck='sudo $(history -p \!\!)'
 
 # Preferred ls usage and typo anticipation
 alias ls='ls -hAl --color=auto'
-alias sl='ls -hAl'
+alias sl='ls -hAl --color=auto'
 
 
 alias ~='cd ~'
