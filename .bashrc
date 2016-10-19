@@ -11,6 +11,9 @@ fi
 # For when I forget to use sudo
 alias fuck='sudo $(history -p \!\!)'
 
+#shortcuts
+alias web='cd /var/www/html'
+
 # Preferred ls usage and typo anticipation
 alias ls='ls -hAl --color=auto'
 alias sl='ls -hAl --color=auto'
@@ -32,6 +35,22 @@ up()
     done
     
 }
+
+goto()
+{
+
+	cd $1;
+	read -p "Save path as:" path
+	echo $path":"$1 >> ~/.goto
+
+	while IFS='' read -r line || [[ -n $line ]]; do
+	    echo "$line"
+	done < "~/.goto"
+
+
+
+}
+
 
 #clear
 alias cls='clear'
