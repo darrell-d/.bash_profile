@@ -15,8 +15,9 @@ alias fuck='sudo $(history -p \!\!)'
 alias web='cd /var/www/html'
 
 # Preferred ls usage and typo anticipation
-#alias ls='ls -hAl --color=auto'
-#alias sl='ls -hAl --color=auto'
+alias ls='ls -hAl'
+alias sl='ls -hAl'
+alias lsc='ls -hAl --color=auto'
 
 
 alias ~='cd ~'
