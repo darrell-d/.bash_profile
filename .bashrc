@@ -15,8 +15,8 @@ alias fuck='sudo $(history -p \!\!)'
 alias web='cd /var/www/html'
 
 # Preferred ls usage and typo anticipation
-alias ls='ls -hAl --color=auto'
-alias sl='ls -hAl --color=auto'
+#alias ls='ls -hAl --color=auto'
+#alias sl='ls -hAl --color=auto'
 
 
 alias ~='cd ~'
@@ -101,3 +101,7 @@ fi
 if [ -f ./.bashrc_custom ]; then
 	. .bashrc_custom
 fi
+
+#source 'brew --prefix git'/etc/bash_completion.d/git-completion.bash
+
+alias branchpurge='git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d'
