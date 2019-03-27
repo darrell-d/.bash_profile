@@ -4,7 +4,8 @@
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 	if [ -x /usr/bin/fortune ] && [ -x /usr/bin/cowsay ]; then # a little fun
-		fortune | cowsay
+		#fortune | cowsay
+	 	fortune -a | fmt -80 -s | $(shuf -n 1 -e cowsay cowthink) -$(shuf -n 1 -e b d g p s t w y) -f $(shuf -n 1 -e $(cowsay -l | tail -n +2)) -n
 	fi
 fi
 
@@ -106,3 +107,14 @@ fi
 #source 'brew --prefix git'/etc/bash_completion.d/git-completion.bash
 
 alias branchpurge='git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d'
+
+. $HOME/.asdf/asdf.sh
+
+. $HOME/.asdf/completions/asdf.bash
+
+export NVM_DIR="/home/ec2-user/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+
+#Do Updates
+alias do_updates='screen -d -m sudo yum update -y'
