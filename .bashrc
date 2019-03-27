@@ -108,9 +108,11 @@ fi
 
 alias branchpurge='git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d'
 
-. $HOME/.asdf/asdf.sh
+if [ -d "${HOME}/.asdf" ]; then
+	. $HOME/.asdf/asdf.sh
 
-. $HOME/.asdf/completions/asdf.bash
+	. $HOME/.asdf/completions/asdf.bash
+fi
 
 export NVM_DIR="/home/ec2-user/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
