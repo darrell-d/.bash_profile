@@ -3,10 +3,12 @@
 # Source global definitions
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
-	if [ -x /usr/bin/fortune ] && [ -x /usr/bin/cowsay ]; then # a little fun
-		#fortune | cowsay
-	 	fortune -a | fmt -80 -s | $(shuf -n 1 -e cowsay cowthink) -$(shuf -n 1 -e b d g p s t w y) -f $(shuf -n 1 -e $(cowsay -l | tail -n +2)) -n
-	fi
+fi
+
+#Add
+if [ -x /usr/bin/fortune ] && [ -x /usr/bin/cowsay ]; then # a little fun
+	#fortune | cowsay
+	fortune -a | fmt -80 -s | $(shuf -n 1 -e cowsay cowthink) -$(shuf -n 1 -e b d g p s t w y) -f $(shuf -n 1 -e $(cowsay -l | tail -n +2)) -n
 fi
 
 # For when I forget to use sudo
@@ -16,9 +18,9 @@ alias fuck='sudo $(history -p \!\!)'
 alias web='cd /var/www/html'
 
 # Preferred ls usage and typo anticipation
-alias ls='ls -hAl'
-alias sl='ls -hAl'
-alias lsc='ls -hAl --color=auto'
+alias ls='ls -hAl --color=auto'
+alias sl='ls -hAl --color=auto'
+alias lsnc='ls -hAl --color=auto'
 
 
 alias ~='cd ~'
