@@ -1,7 +1,2 @@
 # .bashrc
 # Used for non interactive shells
-
-# Source global definitions
-if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
-fi
