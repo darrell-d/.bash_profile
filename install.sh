@@ -9,3 +9,9 @@ fi
 if [ -f ~/.bashrc_extras ]; then
 	. ~/.bashrc_extras
 fi"  | tee -a ~/.bash_profile
+
+echo "# configuration for customization
+
+alias ..code=''" >> ~/.bash_custom
+
+source ~/.bash_profile

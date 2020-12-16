@@ -17,7 +17,7 @@ fi
 alias fuck='sudo $(history -p \!\!)'
 
 #shortcuts
-alias web='cd /var/www/html'
+alias ..code='cd /var/www/html'
 
 # Preferred ls usage and typo anticipation
 alias ls='ls -hAl --color=auto'
@@ -100,12 +100,12 @@ fi
 
 #Custom imports
 
-if [ -f ./.ssh_alias ]; then
-	. .ssh_alias
+if [ -f ~/.ssh_alias ]; then
+	. ~/.ssh_alias
 fi
 
-if [ -f ./.bashrc_custom ]; then
-	. .bashrc_custom
+if [ -f ~/.bashrc_custom ]; then
+	. ~/.bashrc_custom
 fi
 
 #source 'brew --prefix git'/etc/bash_completion.d/git-completion.bash
@@ -116,6 +116,10 @@ if [ -d "${HOME}/.asdf" ]; then
 	. $HOME/.asdf/asdf.sh
 
 	. $HOME/.asdf/completions/asdf.bash
+fi
+
+if [ -f ~/.bash_custom ]; then
+	. ~/.bash_custom
 fi
 
 export NVM_DIR="/home/ec2-user/.nvm"
