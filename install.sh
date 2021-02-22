@@ -1,6 +1,7 @@
 #!/bin/bash
 #/usr/bin/bash
 if [ ! -f ~/.bash_profile_extras ]; then
+	echo"Copying bash profiles"
 	cp ./.bash_profile_extras ~/
 	cp ./.bashrc_extras ~/
 
