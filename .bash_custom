@@ -1,0 +1,8 @@
+# configuration for customization
+
+alias ..code='cd /mnt/c/Users/ddefreitas.exe/My\ Documents/wordpress'
+alias foundation='ssh foundation'
+alias darrelld='ssh darrelld'
+
+# must first install Heroku `curl https://cli-assets.heroku.com/install.sh | sh`
+alias fire='heroku ps:exec -a ddd-quotes'

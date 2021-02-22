@@ -7,17 +7,15 @@ PATH=$PATH:$HOME/bin
 
 export PATH
 
-#Add
-if [ -x /usr/bin/fortune ] && [ -x /usr/bin/cowsay ]; then # a little fun
-	#fortune | cowsay
-	fortune -a | fmt -80 -s | $(shuf -n 1 -e cowsay cowthink) -$(shuf -n 1 -e b d g p s t w y) -f $(shuf -n 1 -e $(cowsay -l | tail -n +2)) -n
+#Add a little fun
+if [ -x /usr/bin/fortune ] && [ -x /usr/bin/cowsay ]; 
+    then 
+        #fortune | cowsay
+        fortune -a | fmt -80 -s | $(shuf -n 1 -e cowsay cowthink) -$(shuf -n 1 -e b d g p s t w y) -f $(shuf -n 1 -e $(cowsay -l | tail -n +2)) -n
 fi
 
 # For when I forget to use sudo
 alias fuck='sudo $(history -p \!\!)'
-
-#shortcuts
-alias ..code='cd /var/www/html'
 
 # Preferred ls usage and typo anticipation
 alias ls='ls -hAl --color=auto'
