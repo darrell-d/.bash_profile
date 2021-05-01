@@ -2,6 +2,7 @@
 #/usr/bin/bash
 
 	echo "Copying bash profiles"
+	mkdir -p ~/.ssh
 	cp ./.bash_profile_extras ~/
 	cp ./.bashrc_extras ~/
 	cp ./.ssh/config ~/.ssh/
