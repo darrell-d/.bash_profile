@@ -1,0 +1,28 @@
+Host darrelld
+  User ec2-user
+  Hostname direct.darrelld.com
+  IdentityFile ~/.ssh/kingdom.pem
+
+Host discord-bot
+  User ec2-user
+  Hostname 54.197.44.232
+  IdentityFile ~/.ssh/discord-bot-key.pem
+
+Host PHC
+  User ec2-user
+  Hostname philadelphiahackersclub.com
+  IdentityFile ~/.ssh/kingdom.pem
+
+Host IOTA
+  User bitnami
+  Hostname 3.228.23.119
+  IdentityFile ~/.ssh/kingdom.pem
+
+Host foundation
+  User bitnami
+  Hostname murielthelmalewisfoundation.org
+  IdentityFile ~/.ssh/MurielThelmaLewis.pem
+
+Host pihole
+  User ubuntu
+  Hostname pi-hole
