@@ -7,7 +7,7 @@
 	cp ./.bashrc_extras ~/
 	cp ./.ssh/config ~/.ssh/
 
-if [ ! -f ~/.bash_profile_extras ]; then
+#if [ ! -f ~/.bash_profile_extras ]; then
 	cp ./.bash_custom ~/
 	# Append to `.bash_profile`
 	echo "
@@ -19,4 +19,3 @@ if [ -f ~/.bashrc_extras ]; then
 fi"  | tee -a ~/.bash_profile
 
 	source ~/.bash_profile
-fi
