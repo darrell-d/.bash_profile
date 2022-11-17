@@ -1,3 +1,4 @@
+# Personal
 Host darrelld
   User ec2-user
   Hostname direct.darrelld.com
@@ -26,3 +27,9 @@ Host foundation
 Host pihole
   User ubuntu
   Hostname pi-hole
+
+
+# Penn
+Host pennjumpbox
+  User ddefreitas
+  Hostname 10.11.2.201
